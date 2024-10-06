@@ -40,6 +40,7 @@ alias vim='nvim'
 
 # path
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin/node-v20.17.0-linux-x64/bin/:$PATH"
 # export CHROME_EXECUTABLE='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'
 # export PATH="$HOME/development/flutter/bin:$PATH"
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
