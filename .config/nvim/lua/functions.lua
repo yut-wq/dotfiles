@@ -14,7 +14,7 @@ vim.keymap.set({ "n" }, "<leader><leader>f", auto_format)
 local function trim_white_space()
 	local filetype = vim.bo.filetype
 	if filetype ~= "markdown" then
-		vim.command([[%s/\s\+$//ge]])
+		vim.cmd([[%s/\s\+$//ge]])
 	end
 end
 
