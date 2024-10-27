@@ -19,6 +19,7 @@ return {
 				"lua_ls",
 				"cssls",
 				"html",
+				"rust_analyzer",
 			}
 			vim.diagnostic.config({
 				signs = {
