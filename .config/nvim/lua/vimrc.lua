@@ -65,5 +65,5 @@ noremap <Leader>j <c-w>j
 noremap <Leader>k <c-w>k
 noremap <Leader>l <c-w>l
 
-tnoremap <ESC> <c-\><c-n>
+tnoremap <ESC><ESC> <c-\><c-n>
 ]])
