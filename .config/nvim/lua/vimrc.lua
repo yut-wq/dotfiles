@@ -67,4 +67,3 @@ noremap <Leader>l <c-w>l
 
 tnoremap <ESC> <c-\><c-n>
 ]])
-

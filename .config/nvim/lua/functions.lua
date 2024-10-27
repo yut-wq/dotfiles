@@ -20,5 +20,5 @@ end
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
-	callback = trim_white_space
+	callback = trim_white_space,
 })
