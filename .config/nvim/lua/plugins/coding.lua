@@ -1,5 +1,5 @@
 return {
-	"andymass/vim-matchup",
+	{ "andymass/vim-matchup", event = { "BufReadPre", "BufNewFile" } },
 	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 	{ "windwp/nvim-ts-autotag", event = "InsertEnter", opts = {} },
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {}, event = { "BufReadPre", "BufNewFile" } },
