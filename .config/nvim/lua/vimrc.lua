@@ -57,7 +57,7 @@ noremap j gj
 noremap k gk
 noremap gj j
 noremap gk k
-noremap <Leader>q :bd
+noremap <Leader>q :bd<CR>
 noremap <c-j> :bprevious<CR>
 noremap <c-k> :bnext<CR>
 noremap <Leader>h <c-w>h
