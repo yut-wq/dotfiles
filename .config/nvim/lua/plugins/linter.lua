@@ -8,6 +8,8 @@ return {
 			linters_by_ft = {
 				rust = { "clippy", "cspell" },
 				markdown = { "cspell" },
+				javascript = { "cspell", "eslint_d" },
+				typescript = { "cspell", "eslint_d" },
 			},
 		},
 		config = function(_, opts)
