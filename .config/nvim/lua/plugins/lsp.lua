@@ -9,18 +9,7 @@ return {
 		opts = function() end,
 		config = function()
 			require("mason").setup()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "pyright", "html", "cssls" },
-			})
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
 
-			local servers = {
-				"lua_ls",
-				"cssls",
-				"html",
-				"rust_analyzer",
-			}
 			vim.diagnostic.config({
 				signs = {
 					text = {
@@ -64,14 +53,15 @@ return {
 				end
 			end
 
-			for _, server in pairs(servers) do
-				local opts = {
-					on_attach = on_attach,
-					capabilities = capabilities,
-				}
-
-				lspconfig[server].setup(opts)
-			end
+			require("mason-lspconfig").setup_handlers({
+				function(server)
+					local opt = {
+						on_attach = on_attach,
+						capabilities = require("cmp_nvim_lsp").default_capabilities(),
+					}
+					require("lspconfig")[server].setup(opt)
+				end,
+			})
 		end,
 	},
 	"onsails/lspkind.nvim",
