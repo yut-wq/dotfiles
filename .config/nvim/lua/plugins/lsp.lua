@@ -42,6 +42,7 @@ return {
 				end)
 				keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 				keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+				keymap(bufnr, "n", "rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 				keymap(bufnr, "n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 			end
 
