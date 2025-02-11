@@ -46,5 +46,6 @@
 .config/nvim/lazy-lock.json
 .config/**
 !.config/lazygit/**
+!.config/nvim
 !.config/nvim/**
 !.config/zsh
