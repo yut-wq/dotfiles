@@ -72,9 +72,6 @@ return {
 				},
 			})
 
-			vim.opt.spell = true
-			vim.opt.spelllang = { "en_us", "cjk" }
-
 			--
 			-- `/` cmdline setup.
 			cmp.setup.cmdline("/", {
