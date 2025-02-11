@@ -6,9 +6,9 @@ return {
 			{ "mason.nvim", cmd = { "Mason", "MasonInstall", "MasonLog", "MasonUpdate" } },
 			"williamboman/mason-lspconfig.nvim",
 		},
-		opts = function() end,
 		config = function()
 			require("mason").setup()
+			require("mason-lspconfig").setup()
 
 			vim.diagnostic.config({
 				signs = {
