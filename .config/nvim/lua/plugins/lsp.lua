@@ -42,7 +42,6 @@ return {
 				keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 				keymap(bufnr, "n", "rn", "<cmd>Lspsaga rename<CR>", opts)
 				keymap(bufnr, "n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-				keymap(bufnr, "n", ";;", "<cmd>lua vim.lsp.buf.completion()<CR>", opts)
 				keymap(bufnr, "n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 				keymap(bufnr, "v", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 			end
