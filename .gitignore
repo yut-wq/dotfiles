@@ -44,3 +44,7 @@
 .config/pulse
 .config/mimeapps.list
 .config/nvim/lazy-lock.json
+.config/**
+!.config/lazygit/**
+!.config/nvim/**
+!.config/zsh
