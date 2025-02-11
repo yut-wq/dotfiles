@@ -44,6 +44,7 @@ set wildmenu wildmode=list:longest,full
 syntax on
 set mouse=a
 " set shellslash
+set nospell
 
 " -----------------------------------------------
 " keymap
