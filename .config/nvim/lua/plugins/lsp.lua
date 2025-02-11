@@ -45,8 +45,8 @@ return {
 				keymap(bufnr, "n", "rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 				keymap(bufnr, "n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 				keymap(bufnr, "n", ";;", "<cmd>lua vim.lsp.buf.completion()<CR>", opts)
-				keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-				keymap(bufnr, "v", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+				keymap(bufnr, "n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
+				keymap(bufnr, "v", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 			end
 
 			local on_attach = function(client, bufnr)
@@ -73,5 +73,16 @@ return {
 		"j-hui/fidget.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {},
+	},
+	{
+		"nvimdev/lspsaga.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("lspsaga").setup({})
+		end,
 	},
 }
