@@ -6,6 +6,7 @@ return {
 		{ "<leader>fg", "<cmd>Telescope live_grep<cr>", {} },
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>", {} },
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", {} },
+		{ "<leader>di", "<cmd>Telescope diagnostics<cr>", {} },
 	},
 	opts = function()
 		local actions = require("telescope.actions")
