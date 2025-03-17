@@ -47,13 +47,13 @@ return {
 				keymap(bufnr, "v", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 			end
 
-			local on_attach = function(client, bufnr)
-				lsp_keymaps(bufnr)
+            local on_attach = function(client, bufnr)
+                lsp_keymaps(bufnr)
 
-				if client.supports_method("textDocument/inlayHint") then
-					vim.lsp.inlay_hint.enable(true)
-				end
-			end
+                if client.supports_method("textDocument/inlayHint") then
+                    vim.lsp.inlay_hint.enable(true)
+                end
+            end
 
 			require("mason-lspconfig").setup_handlers({
 				function(server)
