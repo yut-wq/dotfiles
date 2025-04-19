@@ -40,13 +40,15 @@ alias vim='nvim'
 
 # path
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/bin/node-v20.17.0-linux-x64/bin/:$PATH"
+# export PATH="$HOME/bin/node-v20.17.0-linux-x64/bin/:$PATH"
 export JAVA_HOME=$HOME/bin/jdk-21.0.4+7
 # export CHROME_EXECUTABLE='/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'
 # export PATH="$HOME/development/flutter/bin:$PATH"
 # export PATH=$PATH:$JAVA_HOME/bin
 # export ANDROID_HOME=$HOME/bin/
 # export PATH=$PATH:$ANDROID_HOME/cmdline-tools/bin
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -69,4 +71,7 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-### End of Zinit's installer chunk
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
