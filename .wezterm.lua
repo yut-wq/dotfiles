@@ -11,9 +11,11 @@ config.color_scheme = "Material (base16)"
 config.use_ime = true
 config.window_close_confirmation = "AlwaysPrompt"
 config.enable_scroll_bar = true
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.95
 config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
+
+config.window_background_image = wezterm.home_dir .. "desktop.jpg"
 
 -- key
 config.keys = {
