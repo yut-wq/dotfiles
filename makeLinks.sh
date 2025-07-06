@@ -1,14 +1,19 @@
-#!/bin/bash
+# !/usr/bin/env bash
 
-# synbolic links
-DOTFILES_DIR=$(dirname "$0")
+# 未定義な変数があったら途中で終了する
+set -u
 
-cd $DOTFILES_DIR
+# 今のディレクトリ
+# dotfilesディレクトリに移動する
+BASEDIR=$(dirname $0)
+cd $BASEDIR
 
-ln -sf $DOTFILES_DIR/.bashrc $HOME/.bashrc
-ln -sf $DOTFILES_DIR/.tmux.conf $HOME/.tmux.conf
-ln -sf $DOTFILES_DIR/.zshrc $HOME/.zshrc
-ln -sf $DOTFILES_DIR/.wezterm.lua $HOME/.wezterm.lua
-ln -sf $DOTFILES_DIR/.config $HOME/.config
+# dotfilesディレクトリにある、ドットから始まり2文字以上の名前のファイルに対して
+for f in .??*; do
+    [ "$f" = ".git" ] && continue
+    [ "$f" = ".gitconfig.local.template" ] && continue
+    [ "$f" = ".gitmodules" ] && continue
 
-echo "Dotfiles have been symlinked."
+    # シンボリックリンクを貼る
+    ln -snfv ${PWD}/"$f" ~/
+dcne
