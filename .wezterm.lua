@@ -11,6 +11,9 @@ config.color_scheme = "Material (base16)"
 config.use_ime = true
 config.window_close_confirmation = "AlwaysPrompt"
 config.enable_scroll_bar = true
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 20
+config.window_decorations = "RESIZE"
 
 -- key
 config.keys = {
@@ -27,7 +30,7 @@ config.keys = {
 	{
 		key = "L",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.ActivateTabRelative(-1),
+		action = wezterm.action.ActivateTabRelative(1),
 	},
 	{
 		key = ",",
