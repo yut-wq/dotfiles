@@ -108,7 +108,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "dart.flutterSdkPath": "C:\\Users\\GinCoke\\flutter",
   "editor.cursorSurroundingLines": 8,
   "window.restoreWindows": "none",
   "editor.fontFamily": "'UDEV Gothic NF',Consolas, 'Courier New', monospace",
@@ -150,31 +149,15 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "rust-analyzer.check.command": "clippy",
   "explorer.compactFolders": false,
-  "sonarlint.rules": {
-    "java:S5785": {
-      "level": "on"
-    }
-  },
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
   "editor.fontSize": 16,
-  "roo-cline.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
-    "git log",
-    "git diff",
-    "git show"
-  ],
   "[dockercompose]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  "cSpell.userWords": [
-    "duolingo",
-    "TOEIC",
-    "vimmer"
-  ],
+  "cSpell.userWords": ["duolingo", "TOEIC", "vimmer"],
   "workbench.editor.empty.hint": "hidden"
 }
+
