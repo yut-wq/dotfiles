@@ -35,6 +35,18 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
+	{
+		key = ",",
+		mods = "CTRL",
+		action = wezterm.action.PromptInputLine({
+			description = "Enter new name for tab",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
 }
 
 -- windows用の設定
