@@ -1,0 +1,45 @@
+-- Pull in the wezterm API
+local wezterm = require("wezterm")
+
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+
+-- This is where you actually apply your config choices.
+
+-- For example, changing the initial geometry for new windows:
+config.initial_cols = 120
+config.initial_rows = 28
+
+-- or, changing the font size and color scheme.
+config.font = wezterm.font("UDEV Gothic NF")
+config.font_size = 14
+config.color_scheme = "Material (base16)"
+config.use_ime = true
+config.window_close_confirmation = "AlwaysPrompt"
+config.enable_scroll_bar = true
+
+-- key
+config.keys = {
+	{
+		key = "N",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		key = "H",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+	{
+		key = "L",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivateTabRelative(-1),
+	},
+}
+
+-- windows用の設定
+-- wslの設定
+config.default_domain = "WSL:Ubuntu"
+
+-- Finally, return the configuration to wezterm:
+return config
