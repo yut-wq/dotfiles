@@ -7,7 +7,7 @@ local function trim_white_space()
 end
 
 -- <CR>の削除ショートカット
-vim.keymap.set("n", "<leader>rm", [[:silent! %s/\r$//<CR>]], { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>rc", [[:silent! %s/\r$//<CR>]], { noremap = true, silent = true })
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
