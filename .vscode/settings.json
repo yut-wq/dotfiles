@@ -1,5 +1,180 @@
 {
-    "Lua.diagnostics.disable": [
-        "undefined-global"
-    ]
+  "workbench.colorTheme": "GitHub Dark",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "f", "f"], // Search text
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "h"], // Focus split window at left
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<leader>", "j"], // Focus split window at right
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "k"], // Focus split window at above
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<leader>", "l"], // Focus split window at below
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "w"], // Focus previous tab at the left
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<s-k>"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["<leader>", "g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "f", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "q"], // Close current tab
+      "after": ["<C-w>", "q"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "s"],
+      "after": ["^"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "after": ["$"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": [";", ";"],
+      "commands": ["editor.action.triggerSuggest"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-f>": false,
+    "<C-s>": false,
+    "<C-z>": true,
+    "<C-k>": false
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.duration": 250,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "dart.flutterSdkPath": "C:\\Users\\GinCoke\\flutter",
+  "editor.cursorSurroundingLines": 8,
+  "window.restoreWindows": "none",
+  "editor.fontFamily": "'UDEV Gothic NF',Consolas, 'Courier New', monospace",
+  "editor.rename.enablePreview": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "terminal.integrated.defaultLocation": "editor",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "csharp.suppressBuildAssetsNotification": true,
+  "workbench.editor.enablePreview": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0.8,
+  "editor.accessibilitySupport": "off",
+  "git.autofetch": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.absolutePathToWorkspace": false,
+  "rust-analyzer.testExplorer": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "rust-analyzer.check.command": "clippy",
+  "explorer.compactFolders": false,
+  "sonarlint.rules": {
+    "java:S5785": {
+      "level": "on"
+    }
+  },
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "editor.fontSize": 16,
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "cSpell.userWords": [
+    "duolingo",
+    "TOEIC",
+    "vimmer"
+  ],
+  "workbench.editor.empty.hint": "hidden"
 }
