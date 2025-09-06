@@ -19,14 +19,4 @@ jobs:
           version: latest
           args: .config/nvim
 
-      - name: Commit formatted code
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .config/nvim
-          git diff --cached --quiet || git commit -m "style: format lua files by CI"
-
-      - name: Push changes
-        if: success()
-        run: |
-          git push origin main
+      - uses: stefanzweifel/git-auto-commit-action@v6
