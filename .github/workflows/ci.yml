@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: true
 
       - uses: JohnnyMorganz/stylua-action@v4
         with:
@@ -27,6 +29,4 @@ jobs:
       - name: Push changes
         if: success()
         run: |
-          git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push origin main
