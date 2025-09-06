@@ -8,12 +8,13 @@ return {
 		},
 		config = function()
 			require("mason").setup()
-            require("mason-lspconfig").setup {
-                automatic_enable = {
-                    "lua_ls",
-                    "cspell"
-                }
-            }
+			require("mason-lspconfig").setup({
+				automatic_enable = {
+					"lua_ls",
+					"stylua",
+					"cspell",
+				},
+			})
 
 			vim.diagnostic.config({
 				signs = {
