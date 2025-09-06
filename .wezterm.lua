@@ -17,6 +17,12 @@ config.window_decorations = "RESIZE"
 
 config.window_background_image = wezterm.home_dir .. "desktop.jpg"
 
+-- 起動時に最大化
+wezterm.on('gui-startup', function()
+    local _, _, window = wezterm.mux.spawn_window({})
+    window:gui_window():maximize()
+end)
+
 -- key
 config.keys = {
 	{
@@ -50,7 +56,9 @@ config.keys = {
 
 -- windows用の設定
 -- wslの設定
-config.default_domain = "WSL:Ubuntu"
+-- プロファイルの有無によって切り替えることはできなさそう。
+-- config.default_domain = "WSL:Ubuntu"
+config.default_domain = "WSL:Ubuntu-24.04"
 
 -- Finally, return the configuration to wezterm:
 return config
