@@ -17,11 +17,8 @@ return {
 			-- Define your formatters
 			formatters_by_ft = {
 				lua = { "stylua" },
-				python = { "isort", "black" },
 				markdown = { "prettier" },
-				javascript = { "prettierd", "prettier", stop_after_first = true },
-				typescript = { "prettierd", "prettier", stop_after_first = true },
-				json = { "prettierd", "prettier", stop_after_first = true },
+				json = { "prettier", stop_after_first = true },
 			},
 			-- Set default options
 			default_format_opts = {
