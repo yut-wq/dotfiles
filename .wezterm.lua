@@ -14,6 +14,7 @@ config.enable_scroll_bar = true
 config.window_background_opacity = 0.95
 config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
+config.default_cwd = wezterm.home_dir
 
 config.window_background_image = wezterm.home_dir .. "desktop.jpg"
 
@@ -28,7 +29,7 @@ config.keys = {
 	{
 		key = "N",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+		action = wezterm.action.SpawnTab("DefaultDomain"),
 	},
 	{
 		key = "H",
