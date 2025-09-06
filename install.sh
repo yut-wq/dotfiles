@@ -11,3 +11,5 @@ curl -fsSL https://pyenv.run | sh
 # rg
 sudo apt-get install ripgrep
 
+# lazygit
+sudo apt install lazygit
