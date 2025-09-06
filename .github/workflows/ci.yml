@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
-      - name: Setup stylua
-        uses: JohnnyMorganz/setup-stylua@v3
 
-      - name: Run stylua formatter
-        run: stylua .config/nvim
+      - uses: JohnnyMorganz/stylua-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: .config/nvim
 
       - name: Commit formatted code
         run: |
