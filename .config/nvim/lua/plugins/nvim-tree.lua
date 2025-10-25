@@ -55,6 +55,11 @@ return {
 		end,
 		config = function(_, opts)
 			require("nvim-tree").setup(opts)
+			
+			-- 透過設定
+			vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "NvimTreeNormalFloat", { bg = "none" })
+			
 			local api = require("nvim-tree.api")
 			local function edit_or_open()
 				local node = api.tree.get_node_under_cursor()
