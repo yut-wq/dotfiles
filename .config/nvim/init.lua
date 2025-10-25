@@ -3,6 +3,7 @@ require("functions")
 
 -- plugins
 require("pluginManager")
+require("lsp")
 
 vim.opt.termguicolors = true
 vim.g.loaded_netrw = 1
