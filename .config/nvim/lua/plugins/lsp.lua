@@ -1,18 +1,23 @@
 return {
 	{
+		"mason-org/mason.nvim",
+		opts = {},
+	},
+	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{ "mason.nvim", cmd = { "Mason", "MasonInstall", "MasonLog", "MasonUpdate" } },
+			{ "mason-org/mason.nvim", cmd = { "Mason", "MasonInstall", "MasonLog", "MasonUpdate" } },
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
 			require("mason").setup()
 			require("mason-lspconfig").setup({
-				automatic_enable = {
+				ensure_installed = {
 					"lua_ls",
 					"stylua",
 					"cspell",
+					"rust-analyzer",
 				},
 			})
 
@@ -60,15 +65,15 @@ return {
 				end
 			end
 
-			require("mason-lspconfig").setup_handlers({
-				function(server)
-					local opt = {
-						on_attach = on_attach,
-						capabilities = require("cmp_nvim_lsp").default_capabilities(),
-					}
-					require("lspconfig")[server].setup(opt)
-				end,
-			})
+			-- require("mason-lspconfig").setup_handlers({
+			-- 	function(server)
+			-- 		local opt = {
+			-- 			on_attach = on_attach,
+			-- 			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			-- 		}
+			-- 		require("lspconfig")[server].setup(opt)
+			-- 	end,
+			-- })
 		end,
 	},
 	"onsails/lspkind.nvim",
