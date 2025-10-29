@@ -28,6 +28,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
+		-- Enable inlay hints if supported
+		if client.supports_method("textDocument/inlayHint") then
+			vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+		end
+
 		local opts = { noremap = true, silent = true }
 		local keymap = vim.api.nvim_buf_set_keymap
 		keymap(args.buf, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -47,5 +52,9 @@ local lua_ls_opts = require("lsp.lua_ls")
 vim.lsp.config("lua_ls", lua_ls_opts)
 vim.lsp.enable("lua_ls")
 
+-- load lsp/rust_analyzer.lua
+local rust_analyzer_opts = require("lsp.rust_analyzer")
+vim.lsp.config("rust_analyzer", rust_analyzer_opts)
 vim.lsp.enable("rust_analyzer")
+
 vim.lsp.enable("svelte")
