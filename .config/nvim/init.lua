@@ -12,3 +12,10 @@ vim.opt.termguicolors = true
 vim.cmd.colorscheme("catppuccin-macchiato")
 vim.lsp.set_log_level("debug")
 vim.opt.conceallevel = 1
+
+-- LSP関連のデフォルトを無効にする
+pcall(vim.keymap.del, "n", "gra")
+pcall(vim.keymap.del, "n", "gri")
+pcall(vim.keymap.del, "n", "grn")
+pcall(vim.keymap.del, "n", "grr")
+pcall(vim.keymap.del, "n", "grt")
