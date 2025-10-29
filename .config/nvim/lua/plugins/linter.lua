@@ -7,6 +7,7 @@ return {
 			events = { "BufWritePost", "BufReadPost", "InsertLeave" },
 			linters_by_ft = {
 				markdown = { "cspell" },
+				rust = { "clippy" },
 			},
 		},
 		config = function(_, opts)
