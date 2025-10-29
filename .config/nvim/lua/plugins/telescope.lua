@@ -1,6 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	dependeincies = { "nvim-lua/plenary.nvim" },
+	event = { "BufReadPre", "BufNewFile" },
 	keys = {
 		{ "<leader>ff", "<cmd>Telescope find_files<cr>", {} },
 		{ "<leader>fg", "<cmd>Telescope live_grep<cr>", {} },

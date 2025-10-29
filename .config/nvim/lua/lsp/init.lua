@@ -39,7 +39,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap(args.buf, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 		keymap(args.buf, "n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 		keymap(args.buf, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-		keymap(args.buf, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+		keymap(args.buf, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
 		keymap(args.buf, "n", "rn", "<cmd>Lspsaga rename<CR>", opts)
 		keymap(args.buf, "n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 		keymap(args.buf, "n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
