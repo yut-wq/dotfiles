@@ -36,7 +36,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local opts = { noremap = true, silent = true }
 		local keymap = vim.api.nvim_buf_set_keymap
 		keymap(args.buf, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-		keymap(args.buf, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+		keymap(args.buf, "n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 		keymap(args.buf, "n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 		keymap(args.buf, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 		keymap(args.buf, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
