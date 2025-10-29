@@ -36,8 +36,8 @@ return {
 		end,
 	},
 	{
-        -- typescript統合
-        -- ts_lsは遅いため
+		-- typescript統合
+		-- ts_lsは遅いため
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 		opts = {},
